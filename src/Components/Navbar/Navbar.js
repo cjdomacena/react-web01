@@ -19,7 +19,7 @@ import Logo from '../../images/logo.png';
 
 
 
-const Navbar = () => {
+const Navbar = ( { handleClick } ) => {
     // const [active, setActive] = useState(false);
     return (
         <>
@@ -32,12 +32,12 @@ const Navbar = () => {
                             <p>One Family at a Time.</p>
                         </NavTitle>
                     </NavLogo>
-                    <MobileIcon>
-                        <FaBars />
+                    <MobileIcon onClick = {handleClick}>
+                        <FaBars  />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="/" className="active">Home</NavLinks>
+                            <NavLinks to="/" className="active" >Home</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="about">About</NavLinks>

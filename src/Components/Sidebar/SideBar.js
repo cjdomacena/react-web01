@@ -8,10 +8,11 @@ import {SidebarContainer,
      SidebarButtonLink
     } from './SidebarStyle';
 
-const SideBar = () => {
+const SideBar = ({handleClick, isOpen}) => {
+    
     return (
-        <SidebarContainer>
-            <Icon>
+        <SidebarContainer isOpen={isOpen} onClick={handleClick}>
+            <Icon onClick={handleClick}>
                 <CloseIcon/>
             </Icon>
             <SidebarWrapper>
